@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .app{
+        width: 1536px;
+        background-color: #ccc;
+    }
+
+    .body{
+        width: 100%;
+        height: 500px;
+        background-color: green;
+    }
+
+    .nav{
+        width: 100%;
+        height: 78px;
+        background-color: black;
+        display: flex;
+    }
+
+
+    .nav img{
+        
+        height: 78px;
+    }
+
+    .nav .navParent{
+        display: flex;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        margin-left: 500px;
+
+    }
+
+    .nav .nav-chind{
+        position: relative;
+        cursor: pointer;
+        line-height: 43px;
+        list-style: none;
+        padding: 20px 50px 20px 20px;
+        color: white;
+    }
+
+    .nav .nav-chind-2{
+        position: absolute;
+        background-color: rgb(44, 50, 107);
+        display: none;
+    }
+
+
+    .nav .nav-chind-2 li{
+        list-style: none;
+        cursor: pointer;
+        line-height: 30px;
+        width: 100px;
+        padding: 20px 50px 20px 20px;
+        color: white;
+        
+    }
+
+    .nav .nav-chind:hover>ul{
+        animation-delay: 0.5s;
+        display: block;
+        transition: 0.5s;
+    }
+
+
+
+    /* @keyframes example {
+        /* from {justify-content: space-between;} */
+        /* to {justify-content: space-between;} */
+        /* 30%{justify-content: space-between; opacity: 0;}
+        60%{justify-content: space-between; opacity: 0.5;}
+        30%{justify-content: space-between; opacity: 1;} */
+        /* 100%{flex: 1;} */
+
+        /* 0%{    
+            opacity: 0;
+            transform: translate3d(0,100%,0);
+        }
+        100%{    
+            opacity: 1;
+            transform: none;} */
+         
+
+
+    .box1{
+        margin-top: 200px;
+        background-color: #ccc;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        /* opacity: 0; */
+        /* animation: example; */
+        animation-duration: 5s;
+        transition: 1s;
+
+    }
+    .box1-chind1{
+        background-color: green;
+        height: 200px;
+        width: 40%;
+     
+
+    }
+
+    .box1-chind2{
+        background-color: bisque;
+        height: 200px;
+        width: 40%;
+     
+    }
+
+    .box2{
+        background-color: #ccc;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .box2-chind1{
+        background-color: black;
+        height: 200px;
+        width: 40%;
+        visibility: hidden;
+    }
+
+    .box2-chind2{
+        background-color: blueviolet;
+        height: 200px;
+        width: 40%;
+        visibility: hidden;
+        transition:visibility 0.3s linear,opacity 0.3s linear;
+
+    }
+    
+
+    .box3{
+        background-color: rgb(207, 157, 157);
+        height: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .box3-chind1{
+        background-color: black;
+        height: 400px;
+        width: 40%;
+        left: 0;
+        /* visibility: hidden; */
+    }
+
+    .box3-chind2{
+        background-color: blueviolet;
+        height: 400px;
+        width: 40%;
+        /* visibility: hidden; */
+        transition:visibility 0.3s linear,opacity 0.3s linear;
+
+    }
+
+    .visible{
+        visibility: visible;
+    }
+    
+
+
+</style>
+
+<body>
+    <div class="app">
+        <div class="nav">
+            <div class="img">
+                <img src="../public/images/logo/logo.png" alt="">
+            </div>
+
+            <ul class="navParent">
+                <li class="nav-chind">Trang chủ</li>
+                <li class="nav-chind">Món ăn
+                    <ul class="nav-chind-2">
+                        <li>Món ăn 1</li>
+                        <li>Món ăn 2</li>
+                        <li>Món ăn 3</li>
+                        <li>Món ăn 4</li>
+                        <li>Món ăn 5</li>
+                    </ul>
+                </li>
+                <li class="nav-chind">Khám phá</li>
+                <li class="nav-chind">Giới thiệu</li>
+                <li class="nav-chind">Đặt bàn</li>
+            </ul>
+        </div>
+
+        <div class="body">
+            <div class="box1">
+                <div class="box1-chind1 animate__animated wow animate__fadeInUp"></div>
+                <div class="box1-chind2 animate__animated wow animate__fadeInUp"></div>
+            </div>
+
+            <div class="box2">
+                <div class="box2-chind1 box2-chind animate__animated wow animate__fadeInUp"></div>
+                <div class="box2-chind2 box2-chind animate__animated wow animate__fadeInUp"></div>
+            </div>
+            <div class="box3">
+                <div class="box3-chind1 box3-chind animate__animated wow animate__fadeInUp"></div>
+                <div class="box3-chind2 box3-chind animate__animated wow animate__fadeInUp"></div>
+            </div>
+            <div class="box4">
+                <div class="box4-chind4 "></div>
+                <div class="box4-chind4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+         new WOW().init();
+        
+    </script>
+</body>
+</html>

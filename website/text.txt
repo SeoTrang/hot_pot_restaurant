@@ -1,0 +1,42 @@
+
+-1. danh thu
+ -1.1. tổng số
+ -1.2. 1 tháng gần đây
+ -1.3. 2 tháng gần đây
+ -1.3. 3 tháng gần đây
+ -1.4. 1 năm gần đây
+
+0. đơn đặt
+ 0.1. đã đặt 
+ 0.2. chờ xác nhận
+
+
+
+1. món ăn
+ 1.1. tổng số
+ 1.2. món mới
+ 1.3. top món
+ 1.4. nhà hàng
+
+2. lẩu
+ 2.1. tổng số
+ 2.2. lẩu hàn
+ 2.3. lẩu nhật
+ 2.4. lẩu thái
+ 2.5. lẩu việt
+ 2.6. lẩu chay
+ 2.7. lẩu hải sản
+
+3. buffet 
+ 3.1. tổng số
+ 3.2. buffet hàn
+ 3.3. bufet nhật
+ 3.4. buffet thái
+ 3.5. buffet việt
+ 3.6. buffet chay
+ 3.7. buffet hải sản
+
+4. bàn ghế
+ 4.1. tổng số
+ 4.2. bàn
+ 4.3. ghế
