@@ -26,13 +26,14 @@
                         </div>
                     </div>
 
+                    {{#each category}}
                     <div class="row my-category">
                         <div class="col-4 name">
-                            <span>Lẩu</span>
+                            <span>{{this.name}}</span>
                         </div>
 
                         <div class="col-3 time-add">
-                            <span>10h:AM 10/12/2020</span>
+                            <span>{{this.time}}</span>
                         </div>
 
                         <div class="col-2 edit action">
@@ -43,166 +44,10 @@
                             <i class="fa-solid fa-trash"></i>
                         </div>
                     </div>
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Nhà hàng</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10h:AM 10/12/2020</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Buffet</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10h:AM 10/12/2020</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Buffet</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10h:AM 10/12/2020</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Buffet</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10h:AM 10/12/2020</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Buffet</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10h:AM 10/12/2020</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Buffet</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10h:AM 10/12/2020</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Buffet</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10h:AM 10/12/2020</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Buffet</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10h:AM 10/12/2020</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Buffet</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10h:AM 10/12/2020</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
+                    
+                    {{/each}}
+                  
+                  
 
 
 
@@ -211,23 +56,25 @@
             </div>
 
             <div class="add-new-category">
-                <div class="title">
-                    <span>Thêm danh mục</span>
-                </div>
-                <div class="custom">
-                    <div class="form-add">
-                        <label for="add-category">Nhập tên danh mục</label>
-                        <div class="input">
-                            <input type="text" id="add-category" name="category" placeholder="Nhập tên danh mục...">
+                <form action="/admin/store-category" method="post">
+                    <div class="title">
+                        <span>Thêm danh mục</span>
+                    </div>
+                    <div class="custom">
+                        <div class="form-add">
+                            <label for="add-category">Nhập tên danh mục</label>
+                            <div class="input">
+                                <input type="text" id="add-category" name="mycategory" placeholder="Nhập tên danh mục...">
+                            </div>
+                        </div>
+
+                        <div class="add">
+                            <button type="submit" class="add-category">
+                                Thêm
+                            </button>
                         </div>
                     </div>
-
-                    <div class="add">
-                        <a href="" class="add-category">
-                            Thêm
-                        </a>
-                    </div>
-                </div>
+                </form>
 
             </div>
         </div>

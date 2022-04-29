@@ -339,9 +339,20 @@
 }
 
 #addProduct  .upload span{
+    width: 100%;
+    cursor: pointer;
     font-size: 20px;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* #addProduct  .upload span label{
+    width: 100%;
+    text-align: center;
+
+} */
 
 
 #addProduct .more-info .ingredients span{
@@ -422,6 +433,26 @@
     display: none;
 }
 
+#addProduct .category{
+    margin-top: 20px;
+
+}
+
+#addProduct .category select{
+    padding: 5px;
+    width: 50%;
+    margin-left: 5%;
+    border-radius: 5px;
+    background-color: #394f62;
+    color: #fff;
+}
+
+#addProduct .category select:hover{
+    transition: 0.5s;
+    background-color: #ffc10770;
+    color: #000;
+}
+
 #addProduct .submit{
     display: flex;
     justify-content: center;
@@ -473,10 +504,10 @@
 }
 
 #viewProduct .viewProduct-container{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -563,7 +594,12 @@
     cursor: pointer;
 }
 
-#viewProduct .my-products .product i:hover{
+#viewProduct .my-products .product .edit:hover{
+    color: #ecd401;
+    transition: 0.5s;
+}
+
+#viewProduct .my-products .product .delete:hover{
     color: red;
     transition: 0.5s;
 }
@@ -909,7 +945,8 @@
     justify-content: center;
 }
 
-#add-new-order .submit .book-now{
+#add-new-order .submit label{
+    /* display: none; */
     cursor: pointer;
     font-size: 20px;
     background-color: #ffc107;
@@ -927,7 +964,11 @@
     
 }
 
-#add-new-order .submit .book-now:hover{
+#add-new-order .submit input{
+    display: none;
+}
+
+#add-new-order .submit label:hover{
     background-color: #017aec;
     transition: 0.5s;
     color: white;
@@ -1073,8 +1114,9 @@
     
 }
 
-#view-category .add-new-category a{
+#view-category .add-new-category button{
     display: block;
+    width: 100%;
     text-decoration: none;
     color: white;
     background-color: #ffc107;
@@ -1085,7 +1127,107 @@
     margin-bottom: 70px;
 }
 
-#view-category .add-new-category a:hover{
+#view-category .add-new-category button:hover{
     background-color: #017aec;
     transition: 0.5s;
 }
+
+
+
+/* check table status */
+.check-table-status{
+    width: 100%;
+    min-height: 400px;
+  }
+  
+  .check-table-status .container{
+  
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .check-table-status .title{
+    text-align: center;
+    color: red;
+  }
+  
+  .check-table-status .title1{
+    font-size: 25px;
+    padding-top: 25px;
+  }
+ 
+  
+  .check-table-status .reminder{
+    width: 500px;
+    margin:50px auto;
+    font-size: 17px;
+    color: red;
+    line-height: 30px;
+    font-weight: 600;
+  }
+  
+  .check-table-status .form-check{
+    margin:50px auto;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px #ccc;
+    border: 1px solid orange;
+    font-size: 17px;
+    width: 500px;
+    border-radius: 5px;
+  }
+  
+  .check-table-status .form-check .form-input{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .check-table-status .form-check input{
+    height: 40px;
+    font-size: 14px;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid orange;
+    padding: 10px 5px;
+  }
+  
+  .check-table-status .form-check label{
+    line-height: 40px;
+  }
+  
+  
+  .check-table-status .container .submit{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    
+  }
+  
+  .check-table-status .container .check-table-status-now{
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    margin-top: 50px;
+    width: 150px;
+    line-height: 30px;
+    padding: 10px 25px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    background-color: orange;
+  }
+  
+  .check-table-status .container .check-table-status-now:hover{
+    background-color: rgb(35, 73, 197);
+    transition: 0.5s;
+  }
+  
+  .check-table-status .container .submit i{
+    line-height: 30px;
+  }
+  
+  .check-table-status .container .submit span{
+   
+    margin-left: 10px;
+    font-size: 17px;
+  
+  
+  }

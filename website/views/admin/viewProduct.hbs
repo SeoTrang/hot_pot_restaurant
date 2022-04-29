@@ -11,19 +11,10 @@
 
                 <div class="my-category">
                     <ul>
-                        <li><a href="">Lẩu</a></li>
-                        <li><a href="">Lẩu nhật</a></li>
-                        <li><a href="">Lẩu hàn</a></li>
-                        <li><a href="">Lẩu thái</a></li>
-                        <li><a href="">Lẩu việt</a></li>
-                        <li><a href="">Lẩu Chay</a></li>
-                        <li><a href="">Buffet</a></li>
-                        <li><a href="">Buffet nhật</a></li>
-                        <li><a href="">Buffet hàn</a></li>
-                        <li><a href="">Buffet thái</a></li>
-                        <li><a href="">Buffet việt</a></li>
-                        <li><a href="">Buffet Chay</a></li>
-                        <li><a href="">Nhà hàng</a></li>
+                        {{#each category}}
+                        <li><a href="/admin/products/{{this.slug}}">{{this.name}}</a></li>
+                        {{/each}}
+                        
                         
                     </ul>
                 </div>
@@ -47,7 +38,7 @@
                           
                         </div>
 
-                        <div class="name col-4">
+                        <div class="name col-3">
                             <span>Tên</span>
                         </div>
 
@@ -62,238 +53,47 @@
                         <div class=" col-2">
                             <span>Đã thêm</span>
                         </div>
-
+                        <div class="edit col-1">
+                            <span>sửa</span>
+                        </div>
                         <div class="delete col-1">
                             <span>xóa</span>
                         </div>
                     </div>
 
+                    {{#each product}}
                     <div class="row product">
                         <div class="col-1 checkbox">
                             <input type="checkbox" name="id">
                         </div>
-                        <div class="name col-4">
-                            <span>Lẩu ếch</span>
+                        <div class="name col-3">
+                            <span>{{this.name}}</span>
                         </div>
 
                         <div class="booked col-2">
-                            <span>2365</span>
+                            <span>{{this.countBooked}}</span>
                         </div>
 
                         <div class="price col-2">
-                            <span>299.000đ</span>
+                            <span>{{this.price}}</span>
                         </div>
 
                         <div class="time-add col-2">
-                            <span>10/12/2020</span>
+                            <span>{{this.time}}</span>
+                        </div>
+
+                        <div class="edit col-1">
+                            <i class="fa-solid fa-pen-to-square"></i>
                         </div>
 
                         <div class="delete col-1">
                             <i class="fa-solid fa-trash-can"></i>
                         </div>
                     </div>
-
-                    <div class="row product">
-                        <div class="col-1 checkbox">
-                            <input type="checkbox" name="id">
-                        </div>
-                        <div class="name col-4">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="booked col-2">
-                            <span>2365</span>
-                        </div>
-
-                        <div class="price col-2">
-                            <span>299.000đ</span>
-                        </div>
-
-                        <div class="time-add col-2">
-                            <span>10/12/2020</span>
-                        </div>
-
-                        <div class="delete col-1">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
-
-                    <div class="row product">
-                        <div class="col-1 checkbox">
-                            <input type="checkbox" name="id">
-                        </div>
-                        <div class="name col-4">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="booked col-2">
-                            <span>2365</span>
-                        </div>
-
-                        <div class="price col-2">
-                            <span>299.000đ</span>
-                        </div>
-
-                        <div class="time-add col-2">
-                            <span>10/12/2020</span>
-                        </div>
-
-                        <div class="delete col-1">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
-
-                    <div class="row product">
-                        <div class="col-1 checkbox">
-                            <input type="checkbox" name="id">
-                        </div>
-                        <div class="name col-4">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="booked col-2">
-                            <span>2365</span>
-                        </div>
-
-                        <div class="price col-2">
-                            <span>299.000đ</span>
-                        </div>
-
-                        <div class="time-add col-2">
-                            <span>10/12/2020</span>
-                        </div>
-
-                        <div class="delete col-1">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
+                    {{/each}}
+                    
 
 
-                    <div class="row product">
-                        <div class="col-1 checkbox">
-                            <input type="checkbox" name="id">
-                        </div>
-                        <div class="name col-4">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="booked col-2">
-                            <span>2365</span>
-                        </div>
-
-                        <div class="price col-2">
-                            <span>299.000đ</span>
-                        </div>
-
-                        <div class="time-add col-2">
-                            <span>10/12/2020</span>
-                        </div>
-
-                        <div class="delete col-1">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
-
-                    <div class="row product">
-                        <div class="col-1 checkbox">
-                            <input type="checkbox" name="id">
-                        </div>
-                        <div class="name col-4">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="booked col-2">
-                            <span>2365</span>
-                        </div>
-
-                        <div class="price col-2">
-                            <span>299.000đ</span>
-                        </div>
-
-                        <div class="time-add col-2">
-                            <span>10/12/2020</span>
-                        </div>
-
-                        <div class="delete col-1">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
-
-                    <div class="row product">
-                        <div class="col-1 checkbox">
-                            <input type="checkbox" name="id">
-                        </div>
-                        <div class="name col-4">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="booked col-2">
-                            <span>2365</span>
-                        </div>
-
-                        <div class="price col-2">
-                            <span>299.000đ</span>
-                        </div>
-
-                        <div class="time-add col-2">
-                            <span>10/12/2020</span>
-                        </div>
-
-                        <div class="delete col-1">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
-
-                    <div class="row product">
-                        <div class="col-1 checkbox">
-                            <input type="checkbox" name="id">
-                        </div>
-                        <div class="name col-4">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="booked col-2">
-                            <span>2365</span>
-                        </div>
-
-                        <div class="price col-2">
-                            <span>299.000đ</span>
-                        </div>
-
-                        <div class="time-add col-2">
-                            <span>10/12/2020</span>
-                        </div>
-
-                        <div class="delete col-1">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
-
-
-                    <div class="row product">
-                        <div class="col-1 checkbox">
-                            <input type="checkbox" name="id">
-                        </div>
-                        <div class="name col-4">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="booked col-2">
-                            <span>2365</span>
-                        </div>
-
-                        <div class="price col-2">
-                            <span>299.000đ</span>
-                        </div>
-
-                        <div class="time-add col-2">
-                            <span>10/12/2020</span>
-                        </div>
-
-                        <div class="delete col-1">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
 
                 </div>
 

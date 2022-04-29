@@ -1,0 +1,51 @@
+<div class="check-table-status">
+   
+
+    <div class="root">
+        <div class="container">
+
+        
+        <div class="title">
+                <div class="title1">
+                    <b>KIỂM TRA BÀN TRỐNG</b>
+                </div>
+                <div class="hotline">
+                    <b>— Hotline 0386 640 397 —</b>
+                </div>
+        </div>
+        
+        
+        <div class="reminder">
+            <span>Vui Lòng Nhập Thời Gian Bạn Muốn Đặt Để Hệ Thống Kiểm Tra Số Bàn Trống !!</span>
+        </div>
+        <form action="/admin/add-new-order" method="get">
+            <div class="form-check">
+            
+            <div class="form-input date">
+                <label for="user-date">Chọn Ngày :</label>
+                <input type="date" placeholder="Chọn Ngày" id="date" name="userDate">
+            
+            </div>
+
+            <div class="form-input time">
+                <label for="time">Chọn Giờ :</label>
+                <input type="time" placeholder="Chọn Giờ" id="date" name="userTime">
+            
+            </div>
+            </div>
+
+          
+            <div class="submit">
+                {{!-- <a type="submit">
+                    <div class="check-table-status-now">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    <span>Kiểm tra</span>
+                </div>
+                </a> --}}
+                <input type="submit">
+            </div>
+            
+        </form>
+    </div>
+    </div>
+</div>

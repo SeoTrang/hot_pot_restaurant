@@ -50,3 +50,19 @@ for (let index = 0; index < element.length; index++) {
     element[index].style.backgroundColor = color;
     
 }
+
+
+
+// set disable chechbox add-new-order page
+// function set_disable_Checkbox_Add_NewOrder() {
+//     var checkbox_add_new_order = document.querySelectorAll("#add-new-order .check-box1");
+//     for (let index = 0; index < checkbox_add_new_order.length; index++) {
+//         checkbox_add_new_order[index].checked = true;
+//         checkbox_add_new_order[index].disabled = true;
+        
+//     }
+    
+
+// }
+
+// set_disable_Checkbox_Add_NewOrder();

@@ -1,7 +1,7 @@
 
 <div id="addProduct">
     <div class="root">
-        <form action="">
+        <form action="/admin/store-product" method="post" enctype="multipart/form-data">
             <div class="add-container">
                 <div class="title">
                     <span>Thêm Món Ăn</span>
@@ -17,7 +17,7 @@
                         </div>
 
                         <div class="price">
-                            <label for="price">Tên Món Ăn</label>
+                            <label for="price">Giá Tiền</label>
                             <div class="form-input">
 
                                 <input type="text" placeholder="Nhập giá tiền.." id="price" name="price">
@@ -44,7 +44,13 @@
                         </div>
 
                         <div class="upload">
-                            <span>Chọn Ảnh</span>
+                            {{!-- <span>Chọn Ảnh</span> --}}
+                            <span>
+                                <label for="food-img">
+                                    
+                                    Chọn ảnh</label>
+                                <input  type="file" accept="image/*" name="img" id="food-img">
+                            </span>
                         </div>
 
                     </div>
@@ -59,7 +65,17 @@
                                     <label for="add-ingredient">Nguyên Liệu 1</label>
                                     <div class="form-input">
 
-                                        <input type="text" placeholder="Nguyên liệu 1.." id="add-ingredient" name="ingredient1">
+                                        <input type="text" placeholder="Nguyên liệu 1.." id="add-ingredient" name="ingredients">
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="add-ingredient">
+                                    <label for="add-ingredient">Nguyên Liệu 2</label>
+                                    <div class="form-input">
+
+                                        <input type="text" placeholder="Nguyên liệu 2.." id="add-ingredient" name="ingredients">
                                     </div>
                                 </div>
 
@@ -76,7 +92,7 @@
                         <div class="text">
                             <label for="text">Thông tin thêm</label>
                             <div class="form-input">
-                                <textarea name="text-info" id="text" cols="30" rows="2"></textarea>
+                                <textarea name="textInfo" id="text" cols="30" rows="2"></textarea>
                             </div>
                         </div>
                         <div class="img">
@@ -93,7 +109,14 @@
                                         </div>
 
                                         <div class="upload">
-                                            <span>Chọn Ảnh</span>
+                                            <span>
+                                                <label for="img-info">
+                                    
+                                                    Chọn ảnh
+                                                    
+                                                </label>
+                                                <input type="file" accept="image/*" name="img" id="img-info" multiple>
+                                            </span>
                                         </div>
                                     </div>
                                 </li>
@@ -104,6 +127,16 @@
                             <span>Thêm trường nhập</span>
                         </div>
                     </div>
+                </div>
+
+                <div class="category">
+                    <label for="category">Danh mục</label>
+                    <select name="category" id="category">
+                        {{#each category}}
+                        <option value="{{this._id}}">{{this.name}}</option>
+
+                        {{/each}}
+                    </select>
                 </div>
 
                 <div class="submit">

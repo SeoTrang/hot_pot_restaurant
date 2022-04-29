@@ -1,416 +1,210 @@
 
 <div id="add-new-order">
     <div class="root">
-        <div class="add-new-order-container">
-             
-            {{!-- <h1 style="display: {{check bien1 'eq' bien2}};">bang</h1> --}}
-            <div class="title">
-                <span>Thêm đơn đặt hàng mới</span>
-            </div>
-
-            <div class="form-user-info">
-                <div class="img">
-                    <img src="./images/cau-truyen-thuong-hieu.jpg" alt="">
+        <form action="/admin/store-order" method="post">
+        
+                <div class="add-new-order-container">
+                
+            
+                <div class="title">
+                    <span>Thêm đơn đặt hàng mới</span>
                 </div>
-                <div class="user-info">
-                    <div class="title-box">
-                        <span>Nhập thông tin</span>
-                    </div>
-                    <div class="form-info user-name">
-                        <label for="user-name">Họ Tên</label> <br>
-                        <div class="form-input">
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" placeholder="Họ Và Tên" id="user-name" name="userName">
-                    
-                        </div>
-                    </div>
 
-                    <div class="form-info user-phone">
-                        <label for="user-phone">Số Điện Thoại</label> <br>
-                        <div class="form-input">
-                            <i class="fa-solid fa-square-phone"></i>
-                            <input type="number" placeholder="Số Điện Thoại" id="user-phone" name="userPhone">
-                    
-                        </div>
+                <div class="form-user-info">
+                    <div class="img">
+                        <img src="./images/cau-truyen-thuong-hieu.jpg" alt="">
                     </div>
-
-                    <div class="form-info user-email">
-                        <label for="user-email">Email</label><br>
-                        <div class="form-input">
-                            <i class="fa-solid fa-envelope-circle-check"></i>
-                            <input type="email" placeholder="Email" id="user-email" name="userEmail">
-
+                    <div class="user-info">
+                        <div class="title-box">
+                            <span>Nhập thông tin</span>
                         </div>
-                    </div>
-                    
-                    <div class="form-info user-note">
-                        <label for="user-note">Ghi Chú</label><br>
-                        <div class="form-input">
-                            <i class="fa-solid fa-pencil"></i>
-                            <textarea name="userNote" placeholder="Ghi Chú" id="user-note" cols="30" rows="1"></textarea>
+                        <div class="form-info user-name">
+                            <label for="user-name">Họ Tên</label> <br>
+                            <div class="form-input">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" placeholder="Họ Và Tên" id="user-name" name="userName">
                         
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="form-info user-phone">
+                            <label for="user-phone">Số Điện Thoại</label> <br>
+                            <div class="form-input">
+                                <i class="fa-solid fa-square-phone"></i>
+                                <input type="number" placeholder="Số Điện Thoại" id="user-phone" name="userPhone">
+                        
+                            </div>
+                        </div>
+
+                        <div class="form-info user-email">
+                            <label for="user-email">Email</label><br>
+                            <div class="form-input">
+                                <i class="fa-solid fa-envelope-circle-check"></i>
+                                <input type="email" placeholder="Email" id="user-email" name="userEmail">
+
+                            </div>
+                        </div>
+                        
+                        <div class="form-info user-note">
+                            <label for="user-note">Ghi Chú</label><br>
+                            <div class="form-input">
+                                <i class="fa-solid fa-pencil"></i>
+                                <textarea name="userNote" placeholder="Ghi Chú" id="user-note" cols="30" rows="1"></textarea>
+                            
+                            </div>
+                        </div>
+
+                        
 
                     
+                </div>
 
                 
+
+            
             </div>
+
+            <div class="order-food-info">
+                <div style="display: none;" class="date-time">
+                    <div class="date">
+                        <label for="user-date">Chon Ngày</label>
+                        <input type="date" placeholder="Chọn Ngày" id="date" name="userDate" value="{{userDate}}">
+                    
+                    </div>
+
+                    <div class="time">
+                        <label for="time">Chon Giờ</label>
+                        <input type="time" placeholder="Chọn Giờ" id="date" name="userTime" value="{{userTime}}">
+                    
+                    </div>
+                </div>
+
+
+
+                        
+                <div class="table-order">
+                    <div class="title-box">
+                        <span>Chọn bàn ăn</span>
+                    </div>
+
+                    <div class="container table-content">
+                        <div class="row my-table navi ">
+                            <div class=" col-1 check-box">
+
+                            </div>
+                            <div class="col-5 name">
+                                <span>Tên</span>
+                            </div>
+                            <div class="col-5 status">
+                                <span>Trạng thái</span>
+                            </div>
+                        </div>
+
+
+
+                        {{#each tables}}
+                        <div class="row my-table " data-state="{{this.state}}">
+                            <div class="col-1 check-box">
+                                <div class="my-check">
+                                    <input type="checkbox" name="id_table" value="{{this._id}}">
+                                </div>
+                            </div>
+
+                            <div class="col-5 name">
+                                <span>{{this.name}}</span>
+                            </div>
+
+                            <div class="col-5 status">
+                                <span>Trống</span>
+                            
+                            </div>
+                        </div>
+                        {{/each}}
+                    
+                    </div>
+                    
+                </div>
+
+                <div class="food-order">
+                    <div class="title-box">
+                        <span>Chọn món ăn</span>
+                    </div>
+
+                    <div class="search">
+                        <input type="text" placeholder="Tìm món ăn..!">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <div class="container food-content">
+                        <div class="row navi">
+                            <div class="col-1 check-box">
+
+                            </div>
+
+                            <div class="col-5 name">
+                                <span>Tên</span>
+                            </div>
+
+                            <div class="col-2 promo-food">
+                                <span>Khuyến mãi</span>
+                            </div>
+
+                            <div class="col-2 price">
+                                <span>Giá</span>
+                            </div>
+
+                            <div class="col-2 count">
+                                <span>Số lượng</span>
+                            </div>
+                        </div>
+
+                        {{#each products}}
+                        <div class="row my-food">
+                            <div class="col-1 check-box">
+                                <div class="my-check">
+                                    <input type="checkbox" name="id_food" value="{{this._id}}">
+                                </div>
+                            </div>
+
+                            <div class="col-5 name">
+                                <span>{{this.name}}</span>
+                            </div>
+
+                            <div class="col-2 promo-food">
+                                - <span>{{this.promo}}<span style="color: rgb(238, 238, 238);">%</span> </span>
+                            </div>
+
+                            <div class="col-2 price">
+                                <span>{{this.price}}đ</span>
+                            </div>
+                            <div class="col-2 count">
+                                <input type="number" minlength="1" name="count">
+                            </div>
+                        </div>
+                        {{/each}}
+                    
+
+                    </div>
+                </div>
+            </div>
+
 
             
 
-        
-        </div>
-
-        <div class="order-food-info">
-            <div style="display: none;" class="date-time">
-                <div class="date">
-                    <label for="user-date">Chon Ngày</label>
-                    <input type="date" placeholder="Chọn Ngày" id="date" name="userDate">
-                
-                </div>
-
-                <div class="time">
-                    <label for="time">Chon Giờ</label>
-                    <input type="time" placeholder="Chọn Giờ" id="date" name="userTime">
-                
-                </div>
-            </div>
-
-
-
+            <div class="submit">
+                <label for="submid">
+                    <i class="fa-solid fa-money-check-dollar"></i> 
+                    <span class="book-now">
+                        Đặt bàn
+                    </span>
+                    </label>
+                <input type="submit"  id="submid">
                     
-            <div class="table-order">
-                <div class="title-box">
-                    <span>Chọn bàn ăn</span>
-                </div>
-
-                <div class="container table-content">
-                    <div class="row my-table navi ">
-                        <div class=" col-1 check-box">
-
-                        </div>
-                        <div class="col-5 name">
-                            <span>Tên</span>
-                        </div>
-                        <div class="col-5 status">
-                            <span>Trạng thái</span>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="row my-table">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_table" value="">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Bàn số 1</span>
-                        </div>
-
-                        <div class="col-5 status">
-                            <span>Trống</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-table">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_table" value="">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Bàn số 2</span>
-                        </div>
-
-                        <div class="col-5 status">
-                            <span>Trống</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-table">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_table" value="">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Bàn số 3</span>
-                        </div>
-
-                        <div class="col-5 status">
-                            <span>Đã đặt</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-table">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_table" value="">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Bàn số 1</span>
-                        </div>
-
-                        <div class="col-5 status">
-                            <span>Trống</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-table">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_table" value="">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Bàn số 1</span>
-                        </div>
-
-                        <div class="col-5 status">
-                            <span>Trống</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-table">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_table" value="">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Bàn số 1</span>
-                        </div>
-
-                        <div class="col-5 status">
-                            <span>Trống</span>
-                        </div>
-                    </div>
-                    <div class="row my-table">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_table" value="">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Bàn số 1</span>
-                        </div>
-
-                        <div class="col-5 status">
-                            <span>Trống</span>
-                        </div>
-                    </div>
-                    <div class="row my-table">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_table" value="">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Bàn số 1</span>
-                        </div>
-
-                        <div class="col-5 status">
-                            <span>Trống</span>
-                        </div>
-                    </div>
-                </div>
-                
+            
             </div>
 
-            <div class="food-order">
-                <div class="title-box">
-                    <span>Chọn món ăn</span>
-                </div>
-
-                <div class="search">
-                    <input type="text" placeholder="Tìm món ăn..!">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-
-                <div class="container food-content">
-                    <div class="row navi">
-                        <div class="col-1 check-box">
-
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Tên</span>
-                        </div>
-
-                        <div class="col-3 category-food">
-                            <span>Danh mục</span>
-                        </div>
-
-                        <div class="col-3 price">
-                            <span>Giá</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-food">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_food">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="col-3 category-food">
-                            <span>Lẩu</span>
-                        </div>
-
-                        <div class="col-3 price">
-                            <span>299.000đ</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-food">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_food">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="col-3 category-food">
-                            <span>Lẩu</span>
-                        </div>
-
-                        <div class="col-3 price">
-                            <span>299.000đ</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-food">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_food">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="col-3 category-food">
-                            <span>Lẩu</span>
-                        </div>
-
-                        <div class="col-3 price">
-                            <span>299.000đ</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-food">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_food">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="col-3 category-food">
-                            <span>Lẩu</span>
-                        </div>
-
-                        <div class="col-3 price">
-                            <span>299.000đ</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-food">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_food">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="col-3 category-food">
-                            <span>Lẩu</span>
-                        </div>
-
-                        <div class="col-3 price">
-                            <span>299.000đ</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-food">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_food">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="col-3 category-food">
-                            <span>Lẩu</span>
-                        </div>
-
-                        <div class="col-3 price">
-                            <span>299.000đ</span>
-                        </div>
-                    </div>
-
-                    <div class="row my-food">
-                        <div class="col-1 check-box">
-                            <div class="my-check">
-                                <input type="checkbox" name="id_food">
-                            </div>
-                        </div>
-
-                        <div class="col-5 name">
-                            <span>Lẩu ếch</span>
-                        </div>
-
-                        <div class="col-3 category-food">
-                            <span>Lẩu</span>
-                        </div>
-
-                        <div class="col-3 price">
-                            <span>299.000đ</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
-
-        <div class="submit">
-            <a class="book-now">
-                <i class="fa-solid fa-money-check-dollar"></i>
-                    <span href="">Đặt Bàn</span>
-            </a>
-        </div>
-
-    </div>
+        </form>
 </div>
 
 
