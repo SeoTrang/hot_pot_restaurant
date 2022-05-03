@@ -11,22 +11,23 @@
         </div>
 
         <div class="products wow animate__animated animate__zoomInUp">
+                    {{#each products}}
                     <div class="product">
-                        <a href="">
+                        <a href="/detail/{{this.slug}}">
                             <div class="img">
-                                <img src="./images/hotpot/lau-ech-sa-te.jpg" alt="">
+                                <img src="./{{this.img}}" alt="">
                             </div>
 
                             <div class="promotion">
-                                <span>-10%</span>
+                                <span>-{{this.promo}}%</span>
                             </div>
 
                            
                             <div class="name-product">
-                                <span>Lẩu ếch</span>
+                                <span>{{this.name}}</span>
                             </div>
                             <div class="price">
-                                <span>399.000đ</span>
+                                <span>{{this.price}}đ</span>
                             </div>
                             
 
@@ -37,188 +38,8 @@
                             </a>
                         </div>
                     </div>
-
-                    <div class="product">
-                        <a href="">
-                            <div class="img">
-                                <img src="./images/hotpot/lau-ech-sa-te.jpg" alt="">
-                            </div>
-
-                            <div class="promotion">
-                                <span>-10%</span>
-                            </div>
-
-                           
-                            <div class="name-product">
-                                <span>Lẩu ếch</span>
-                            </div>
-                            <div class="price">
-                                <span>399.000đ</span>
-                            </div>
-
-                        </a>
-                        <div class="book-now">
-                            <a href="">
-                                Đặt chỗ ngay
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <a href="">
-                            <div class="img">
-                                <img src="./images/hotpot/lau-ech-sa-te.jpg" alt="">
-                            </div>
-
-                            <div class="promotion">
-                                <span>-10%</span>
-                            </div>
-
-                           
-                            <div class="name-product">
-                                <span>Lẩu ếch</span>
-                            </div>
-                            <div class="price">
-                                <span>399.000đ</span>
-                            </div>
-
-                        </a>
-                        <div class="book-now">
-                            <a href="">
-                                Đặt chỗ ngay
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <a href="">
-                            <div class="img">
-                                <img src="./images/hotpot/lau-ech-sa-te.jpg" alt="">
-                            </div>
-
-                            <div class="promotion">
-                                <span>-10%</span>
-                            </div>
-
-                           
-                            <div class="name-product">
-                                <span>Lẩu ếch</span>
-                            </div>
-                            <div class="price">
-                                <span>399.000đ</span>
-                            </div>
-
-                        </a>
-                        <div class="book-now">
-                            <a href="">
-                                Đặt chỗ ngay
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <a href="">
-                            <div class="img">
-                                <img src="./images/hotpot/lau-ech-sa-te.jpg" alt="">
-                            </div>
-
-                            <div class="promotion">
-                                <span>-10%</span>
-                            </div>
-
-                           
-                            <div class="name-product">
-                                <span>Lẩu ếch</span>
-                            </div>
-                            <div class="price">
-                                <span>399.000đ</span>
-                            </div>
-
-                        </a>
-                        <div class="book-now">
-                            <a href="">
-                                Đặt chỗ ngay
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <a href="">
-                            <div class="img">
-                                <img src="./images/hotpot/lau-ech-sa-te.jpg" alt="">
-                            </div>
-
-                            <div class="promotion">
-                                <span>-10%</span>
-                            </div>
-
-                           
-                            <div class="name-product">
-                                <span>Lẩu ếch</span>
-                            </div>
-                            <div class="price">
-                                <span>399.000đ</span>
-                            </div>
-
-                        </a>
-                        <div class="book-now">
-                            <a href="">
-                                Đặt chỗ ngay
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <a href="">
-                            <div class="img">
-                                <img src="./images/hotpot/lau-ech-sa-te.jpg" alt="">
-                            </div>
-
-                            <div class="promotion">
-                                <span>-10%</span>
-                            </div>
-
-                           
-                            <div class="name-product">
-                                <span>Lẩu ếch</span>
-                            </div>
-                            <div class="price">
-                                <span>399.000đ</span>
-                            </div>
-
-                        </a>
-                        <div class="book-now">
-                            <a href="">
-                                Đặt chỗ ngay
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <a href="">
-                            <div class="img">
-                                <img src="./images/hotpot/lau-ech-sa-te.jpg" alt="">
-                            </div>
-
-                            <div class="promotion">
-                                <span>-10%</span>
-                            </div>
-
-                           
-                            <div class="name-product">
-                                <span>Lẩu ếch</span>
-                            </div>
-                            <div class="price">
-                                <span>399.000đ</span>
-                            </div>
-
-                        </a>
-                        <div class="book-now">
-                            <a href="">
-                                Đặt chỗ ngay
-                            </a>
-                        </div>
-                    </div>
+                    {{/each}}
+                    
                 </div>
     </div>
 </div>

@@ -14,6 +14,7 @@ const product = new Schema({
     ingredients:[String],
     moreInfoText:String,
     moreInfoImg:[String],
+    temp:String,
 
     slug:{type:String, slug:'name',unique:true},
     time:String

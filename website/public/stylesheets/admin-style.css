@@ -433,6 +433,10 @@
     display: none;
 }
 
+#addProduct .info-chind li{
+    margin-bottom: 20px;
+}
+
 #addProduct .category{
     margin-top: 20px;
 
@@ -938,6 +942,12 @@
     padding: 15px;
     margin-top: 1px;
     background-color: #6d8da6;
+}
+
+#add-new-order .my-food .count input{
+    width: 80px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 #add-new-order .submit{

@@ -3,232 +3,156 @@
 
     </div>
 
-    <div class="container">
-         <div class="route">
-            <i class="fa-solid fa-house"></i>
-            <span> > Đặt bàn</span>
+    <form action="/store-order" method="post">
+            <div class="container">
+            <div class="route">
+                <i class="fa-solid fa-house"></i>
+                <span> > Đặt bàn</span>
+                
+            </div>
+
+            <div class="title">
+                <div class="title1">
+                    <b>ĐẶT BÀN ONLINE</b>
+                </div>
+                <div class="hotline">
+                    <b>— Hotline 0386 640 397 —</b>
+                </div>
+            </div>
+
+            <div class="menu-products">
+                <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Tên</th>
+                        <th scope="col">Hình ảnh</th>
+                        <th scope="col">Giá tiền</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Xoá</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each products}}
+                    <tr>
+                        <input type="text" style="display: none;" value="{{this._id}}" name="products">
+                        <th scope="row">1</th>
+                        <td>{{this.name}}</td>
+                        <td><img src="./{{this.img}}" alt=""></td>
+                        <td style="color: red;">{{this.price}}đ</td>
+                        <td> <input type="number" value="1" minlength="1" name="count"> </td>
+                        <td ><i class="fa-solid fa-trash-can deleteProduct"></i></td>
+                    </tr>
+                    {{/each}}
+                    
+                </tbody>
+                </table>
+            </div>
+
+            <p style="font-size: 25px; margin-top: 25px; color: red; margin-bottom: 25px;">Vui lòng chọn bàn !!</p>
             
-        </div>
-
-        <div class="title">
-            <div class="title1">
-                <b>ĐẶT BÀN ONLINE</b>
-            </div>
-            <div class="hotline">
-                <b>— Hotline 0386 640 397 —</b>
-            </div>
-        </div>
-
-        <div class="menu-products">
-            <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Tên</th>
-                    <th scope="col">Hình ảnh</th>
-                    <th scope="col">Giá tiền</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Lẩu ếch</td>
-                    <td><img src="./images/hotpot/buffet-lau-ech-jiang-hu---su-van-hanh-300-196620184452.jpg" alt=""></td>
-                    <td style="color: red;">299.000đ</td>
-                </tr>
-                
-                
-            </tbody>
-            </table>
-        </div>
-
-        <p style="font-size: 25px; margin-top: 25px; color: red; margin-bottom: 25px;">Vui lòng chọn bàn !!</p>
-        
-        
-        
-        
-        <div class="menu-table-book">
             
-            <div class="table-me">
-                <div class="img">
-                    <img src="./images/ban-an.jpg" alt="">
+            
+            
+            <div class="menu-table-book">
+                
+                {{#each tables}}
+                <div class="table-me">
+                    <div class="img">
+                        <img src="./images/ban-an.jpg" alt="">
+                    </div>
+
+                    <div class="radio">
+                        <input type="checkbox" id="table1" name="table_book" value="{{this._id}}">
+                        <label for="table1">{{this.name}}</label><br>
+                    </div>
+
+                    <div class="status-book">
+
+                    </div>
+
+
                 </div>
 
-                <div class="radio">
-                    <input type="radio" id="table1" name="table-book" value="tb1">
-                    <label for="table1">Bàn số 1</label><br>
-                </div>
+                {{/each}}
 
-                <div class="status-book">
 
-                </div>
 
 
             </div>
 
-
-            <div class="table-me">
+            <div class="form-user-info">
                 <div class="img">
-                    <img src="./images/ban-an.jpg" alt="">
+                    <img src="./images/cau-truyen-thuong-hieu.jpg" alt="">
                 </div>
+                <div class="user-info">
+                    <div class="form-info user-name">
+                        <label for="user-name">Họ Tên</label> <br>
+                        <div class="form-input">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Họ Và Tên" id="user-name" name="userName">
+                    
+                        </div>
+                    </div>
 
-                <div class="radio">
-                    <input type="radio" id="table2" name="table-book" value="tb1">
-                    <label for="table2">Bàn số 2</label><br>
+                    <div class="form-info user-phone">
+                        <label for="user-phone">Số Điện Thoại</label> <br>
+                        <div class="form-input">
+                            <i class="fa-solid fa-square-phone"></i>
+                            <input type="number" placeholder="Số Điện Thoại" id="user-phone" name="userPhone">
+                    
+                        </div>
+                    </div>
+
+                    <div class="form-info user-email">
+                        <label for="user-email">Email</label><br>
+                        <div class="form-input">
+                            <i class="fa-solid fa-envelope-circle-check"></i>
+                            <input type="email" placeholder="Email" id="user-email" name="userEmail">
+
+                        </div>
+                    </div>
+                    
+                    <div class="form-info user-note">
+                        <label for="user-note">Ghi Chú</label><br>
+                        <div class="form-input">
+                            <i class="fa-solid fa-pencil"></i>
+                            <textarea name="userNote" placeholder="Ghi Chú" id="user-note" cols="30" rows="1"></textarea>
+                        
+                        </div>
+                    </div>
+
+                    <div style="display: none;" class="date-time">
+                        <div class="date">
+                            <label for="user-date">Chon Ngày</label>
+                            <input type="date" value="{{userDate}}" placeholder="Chọn Ngày" id="date" name="userDate">
+                        
+                        </div>
+
+                        <div class="time">
+                            <label for="time">Chon Giờ</label>
+                            <input type="time" value="{{userTime}}" placeholder="Chọn Giờ" id="date" name="userTime">
+                        
+                        </div>
+                    </div>
+                    
+
+                    
+
                 </div>
-
-                <div class="status-book">
-
-                </div>
-
-
             </div>
 
-
-            <div class="table-me">
-                <div class="img">
-                    <img src="./images/ban-an.jpg" alt="">
-                </div>
-
-                <div class="radio">
-                    <input style="display: none;" type="radio" id="table3" name="table-book" value="tb1">
-                    <label for="table3">Bàn số 3</label><br>
-                </div>
-
-                <div class="status-book">
-                    <span>Bàn đã được người khác đặt!</span>
-                </div>
-
-
-            </div>
-
-
-
-{{!-- ban 4 --}}
-            <div class="table-me">
-                <div class="img">
-                    <img src="./images/ban-an.jpg" alt="">
-                </div>
-
-                <div class="radio">
-                    <input type="radio" id="table4" name="table-book" value="tb1">
-                    <label for="table4">Bàn số 4</label><br>
-                </div>
-
-                <div class="status-book">
-
-                </div>
-
-
-            </div>
-
-{{!-- ban 5 --}}
-            <div class="table-me">
-                <div class="img">
-                    <img src="./images/ban-an.jpg" alt="">
-                </div>
-
-                <div class="radio">
-                    <input type="radio" id="table5" name="table-book" value="tb1">
-                    <label for="table5">Bàn số 5</label><br>
-                </div>
-
-                <div class="status-book">
-
-                </div>
-
-
-            </div>
-
-{{!-- ban 6 --}}
-            <div class="table-me">
-                <div class="img">
-                    <img src="./images/ban-an.jpg" alt="">
-                </div>
-
-                <div class="radio">
-                    <input type="radio" id="table6" name="table-book" value="tb1">
-                    <label for="table6">Bàn số 6</label><br>
-                </div>
-
-                <div class="status-book">
-
-                </div>
-
-
+            <div class="submit">
+                        <button type="submit" class="book-now">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                            <span>Đặt Bàn</span>
+                        </button>
             </div>
 
         </div>
-
-        <div class="form-user-info">
-            <div class="img">
-                <img src="./images/cau-truyen-thuong-hieu.jpg" alt="">
-            </div>
-            <div class="user-info">
-                <div class="form-info user-name">
-                    <label for="user-name">Họ Tên</label> <br>
-                    <div class="form-input">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Họ Và Tên" id="user-name" name="userName">
-                
-                    </div>
-                </div>
-
-                <div class="form-info user-phone">
-                    <label for="user-phone">Số Điện Thoại</label> <br>
-                    <div class="form-input">
-                        <i class="fa-solid fa-square-phone"></i>
-                        <input type="number" placeholder="Số Điện Thoại" id="user-phone" name="userPhone">
-                
-                    </div>
-                </div>
-
-                <div class="form-info user-email">
-                    <label for="user-email">Email</label><br>
-                    <div class="form-input">
-                        <i class="fa-solid fa-envelope-circle-check"></i>
-                        <input type="email" placeholder="Email" id="user-email" name="userEmail">
-
-                    </div>
-                </div>
-                
-                <div class="form-info user-note">
-                    <label for="user-note">Ghi Chú</label><br>
-                    <div class="form-input">
-                        <i class="fa-solid fa-pencil"></i>
-                        <textarea name="userNote" placeholder="Ghi Chú" id="user-note" cols="30" rows="1"></textarea>
-                    
-                    </div>
-                </div>
-
-                <div style="display: none;" class="date-time">
-                    <div class="date">
-                        <label for="user-date">Chon Ngày</label>
-                        <input type="date" placeholder="Chọn Ngày" id="date" name="userDate">
-                    
-                    </div>
-
-                    <div class="time">
-                        <label for="time">Chon Giờ</label>
-                        <input type="time" placeholder="Chọn Giờ" id="date" name="userTime">
-                    
-                    </div>
-                </div>
-                
-
-                
-
-            </div>
-        </div>
-
-        <div class="submit">
-                    <div class="book-now">
-                        <i class="fa-solid fa-money-check-dollar"></i>
-                         <span>Đặt Bàn</span>
-                    </div>
-        </div>
-
-    </div>
+    
+    </form>
 </div>
 
 <script>

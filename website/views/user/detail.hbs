@@ -1,14 +1,16 @@
-<div class="detail">
+<div class="detail" id="detail">
     <div class="space">
 
     </div>
 
+    {{!-- tag data element --}}
+    <input class="dataId" type="text" value="{{product._id}}" style="display: none;">
     
 
     <div class="container">
         <div class="route">
             <i class="fa-solid fa-house"></i>
-            <span> > Lẩu ếch</span>
+            <span> > {{product.name}}</span>
             
         </div>
          
@@ -16,11 +18,11 @@
         <div class="product-detail">
 
             <div class="name-product">
-                    <span>Lẩu ếch</span>
+                    <span>{{product.name}}</span>
                 </div>
 
             <div class="img">
-                <img src="./images/hotpot/lau-ech-sa-te.jpg" alt="">
+                <img src="./{{product.img}}" alt="">
             </div>
 
             <div class="product-dt">
@@ -31,22 +33,23 @@
                     <div class="block">
                         <span>Giảm giá : </span>
                         <i class="fa-solid fa-arrow-trend-down" style="color: red;"></i>
-                        <span class="value">10%</span>
+                        <span class="value">{{product.promo}}%</span>
                     </div>
                 </div>
 
                 <div class="price">
-                    <span>299.000đ</span>
+                    <span>{{product.price}}đ</span>
 
                 </div>
 
                 
 
-                <div class="book-now-detail">
-                    <a href="">
+                <div class="book-now-detail" >
+                    <a href="/check-table-status" onclick="addProduct()">
                         Đặt chỗ ngay
                     </a>
                 </div>
+
 
             </div>
         </div>
@@ -65,39 +68,11 @@
                 </div>
                 <div class="content-ingre">
                     <ul>
+                        {{#each product.ingredients}}
                         <li>
-                            <span>Xương heo (xương cố hoặc xương ống) 400g</span>
+                            <span>{{this}}</span>
                         </li>
-                        <li>
-                            <span>Đậu hũ chiên 1 miếng</span>
-                        </li>
-                        <li>
-                            <span>Nấm rơm cắt chữ thập trên đầu 100g</span>
-                        </li>
-                        <li>
-                            <span>Hành tím 10 củ</span>
-                        </li>
-                        <li>
-                            <span>Ớt hiểm 2 trái</span>
-                        </li>
-                        <li>
-                            <span>Sữa tươi không đường 1 chén</span>
-                        </li>
-                        <li>
-                            <span>Lá quế 3 nhánh</span>
-                        </li>
-                        <li>
-                            <span>RAU NÊM: Cải hảo, tần ô, nấm linh chi, nấm kim châm, kim chi</span>
-                        </li>
-                        <li>
-                            <span>ĂN KÈM: Bún tươi</span>
-                        </li>
-                        <li>
-                            <span>Gia vị: Dầu ăn, nước mắm</span>
-                        </li>
-                        <li>
-                            <span>Gia vị nêm sẵn Gia vị nêm sẵn Aji-Quick® Lẩu Kim chi Lẩu Kim chi</span>
-                        </li>
+                        {{/each}}
                     </ul>
                 </div>
             </div>
@@ -114,15 +89,13 @@
                 </div>
                 <div class="content-more-info">
                     <div class="text">
-                        <span>Buffet lẩu nhúng theo phong cách Nhật – Hàn – Trung là một hình thức ẩm thực rất được giới trẻ ngày nay ưa chuộng. Nếu bạn cũng là “tín đồ” của thể loại này thì đừng bỏ qua deal lần này để cùng Hotdeal khám phá và thưởng thức các thực đơn buffet lẩu đặc sắc tại Rakuen Hotpot, với giá chỉ từ 186.000 đồng!</span>
+                        <span>{{product.moreInfoText}}</span>
                     </div>
                     <div class="img">
                         <ul>
-                            <li><img src="./images/hotpot/lau-ech-sa-te-4.jpg" alt=""></li>
-                            <li><img src="./images/hotpot/lau-ech-sa-te-2.jpg" alt=""></li>
-                            <li><img src="./images/hotpot/lau-ech-sa-te-1.jpg" alt=""></li>
-                            <li><img src="./images/hotpot/lau-ech-sa-te-3.jpg" alt=""></li>
-                            <li><img src="./images/hotpot/lau-ech-sa-te-5.jpg" alt=""></li>
+                            {{#each product.moreInfoImg}}
+                            <li><img src="./{{this}}" alt=""></li>
+                            {{/each}}
                         </ul>
                     </div>
                 </div>

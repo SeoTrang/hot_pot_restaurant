@@ -19,6 +19,7 @@
         <div class="reminder">
             <span>Vui Lòng Nhập Thời Gian Bạn Muốn Đặt Để Hệ Thống Kiểm Tra Số Bàn Trống !!</span>
         </div>
+        <form class="form-check" action="/book" id="sendProductsIdToServer"> 
         <div class="form-check">
             
             <div class="form-input date">
@@ -34,15 +35,24 @@
             </div>
         </div>
 
-        <a href="/book">
-            <div class="submit">
-                    <div class="check-table-status-now">
-                        <i class="fa-solid fa-money-check-dollar"></i>
-                         <span>Kiểm tra</span>
-                    </div>
-        </div>
         
-        </a>
+        
+            <div class="input" style="display: none;">
+                
+            </div>
+
+            <button type="submit" onclick="sendProductsIdToServer()">
+                <div class="submit">
+                        <div class="check-table-status-now">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                            <span>Kiểm tra</span>
+                        </div>
+            </div>
+            
+            </button>
+        </form>
+
+        
     </div>
 </div>
 

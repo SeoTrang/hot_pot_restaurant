@@ -62,9 +62,14 @@ header{
   line-height: 78px;
 }
 
-#search .content .search-icon{
+#search .content button{
+  
+  /* height: 50px; */
+  background-color: transparent;
+  border: none;
+  
   position: absolute;
-  margin-top: 27px;
+  margin-top: 0px;
   font-size: 20px;
   margin-left: -35px;
   cursor: pointer;
@@ -325,7 +330,9 @@ header{
 }
 
 .products .product{
+
   margin-top: 20px;
+  margin: 20px 20px 0 20px;
   background-color: #fff;
   box-shadow: 5px 5px 5px #ccc;
   border-radius: 5px;
@@ -339,7 +346,7 @@ a{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 
@@ -715,6 +722,18 @@ a{
   border-radius: 5px;
 }
 
+.book .menu-products input{
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.book .menu-products i:hover{
+  color: red;
+  transition: 0.5s;
+  cursor: pointer;
+}
 
 .book .menu-table-book img{
   height: 200px;
@@ -918,6 +937,16 @@ a{
   justify-content: center;
   cursor: pointer;
   
+  
+}
+
+.check-table-status .container button{
+  background-color: transparent;
+  border: none;
+}
+
+.check-table-status .container form{
+  text-align: center;
 }
 
 .check-table-status .container .check-table-status-now{

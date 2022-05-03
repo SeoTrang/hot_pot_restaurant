@@ -8,12 +8,15 @@
             </div>
 
             <div id="search">
-                <div class="content">
-                    <input type="text" placeholder="Bạn muốn tìm?...">
-                    
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    
-                </div>
+                <form action="/search" method="get">
+                
+                    <div class="content">
+                        <input type="text" placeholder="Bạn muốn tìm?..." name="search">
+                        
+                        <button><i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
             <div class="navi">
                 <ul class="nav">
@@ -42,14 +45,14 @@
                             <li class="nav-chind-2">
                                 <a href=""><span>Buffet</span> <i class="fa-solid fa-angle-right"></i></a>
                                 
-                                <ul class="navi-3">
+                                {{!-- <ul class="navi-3">
                                     <li class="nav-chind-3"><a href="">Buffet Hàn</a></li>
                                     <li class="nav-chind-3"><a href="">Buffet Nhật</a></li>
                                     <li class="nav-chind-3"><a href="">Buffet Thái</a></li>
                                     <li class="nav-chind-3"><a href="">Buffet Việt</a></li>
                                     <li class="nav-chind-3"><a href="">Buffet Hải Sản</a></li>
                                     <li class="nav-chind-3"><a href="">Buffet Chay</a></li>
-                                </ul>
+                                </ul> --}}
 
                                 </li>
                         </ul>

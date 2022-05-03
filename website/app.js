@@ -46,6 +46,7 @@ app.use(cookieParser());
 
 // static file
 app.use("/admin",express.static(path.join(__dirname, 'public')));
+app.use("/detail",express.static(path.join(__dirname, 'public')));
 app.use("/admin/products",express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 

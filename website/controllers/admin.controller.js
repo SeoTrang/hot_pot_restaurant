@@ -4,7 +4,7 @@ const table                     = require('../model/table');
 const category                  = require('../model/category');
 const product                   = require('../model/product');
 const booked                    = require('../model/booked');
-const { splitString }                 = require('../util/buil_funtion_help');
+const { splitString }           = require('../util/buil_funtion_help');
 
 
 var now = new Date();
@@ -234,11 +234,13 @@ class admin{
         // const lenFood = req.body.id_food.length;
         let timeEat = req.body.userDate+" "+req.body.userTime;
 
+        // res.json(req.body);
         const booked_save = new booked({
             customerName:req.body.userName,
             phone       :req.body.userPhone,
             email       :req.body.userEmail,
             note        :req.body.userNote,
+            table       :req.body.id_table,
             bookedFood  :{
                 id_food : req.body.id_food,
                 count   : req.body.count
@@ -262,25 +264,25 @@ class admin{
         .then(booked =>{
             // res.json(booked);
 
-            booked1 = booked;
-            // booked1[0].customerName;
-            // booked1[0].name = "ma seo 1111111";
-            // console.log(booked1[0])
-            // res.json(booked1[0].bookedFood.id_food.length);
+            // booked1 = booked;
+            // // booked1[0].customerName;
+            // // booked1[0].name = "ma seo 1111111";
+            // // console.log(booked1[0])
+            // // res.json(booked1[0].bookedFood.id_food.length);
 
-            // var len_id_food = booked1[0].bookedFood.id_food.length;
-            // for (let index = 0; index < len_id_food; index++) {
-            //     product.f
+            // // var len_id_food = booked1[0].bookedFood.id_food.length;
+            // // for (let index = 0; index < len_id_food; index++) {
+            // //     product.f
                 
-            // }
-            var product1 = booked1[0].bookedFood.id_food[0];
-            // res.json(product1);
+            // // }
+            // var product1 = booked1[0].bookedFood.id_food[0];
+            // // res.json(product1);
 
 
-            product.find({_id: {$in:product1}})
-            .then(product =>{
-                res.json(product);
-            })
+            // product.find({_id: {$in:product1}})
+            // .then(product =>{
+            //     res.json(product);
+            // })
 
             // res.render('admin/order_wait_confirm',{layout:"admin",
             //     booked:mutipleMogooseToObject(booked)
@@ -288,7 +290,7 @@ class admin{
         })
         
         
-        //res.render('admin/order_wait_confirm',{layout:"admin"});
+        res.render('admin/order_wait_confirm',{layout:"admin"});
     }
 
 
